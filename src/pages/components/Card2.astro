@@ -1,0 +1,16 @@
+---
+const img = Astro.props.img;
+const h1 = Astro.props.h1;
+const h2 = Astro.props.h2;
+const text = Astro.props.text;
+const link = Astro.props.link;
+
+---
+
+<article>
+    <h1>{h1}</h1>
+    <h2>{h2}</h2>
+    <p>{text}</p>
+    <link href={link}></link>
+    <img src={img} />
+</article>
