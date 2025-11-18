@@ -1,0 +1,21 @@
+---
+const h2text = Astro.props.h2text;
+const text1 = Astro.props.text1;
+const boldText = Astro.props.boldText;
+const prisText = Astro.props.prisText;
+const button = Astro.props.button;
+---
+
+<article class="planCard">
+<h2>{h2text}</h2>
+<p>{text1}</p>
+<p>{boldText}</p>
+<p>{prisText}</p>
+<a href="">{button}</a>
+</article>
+
+<style>
+.planCard{
+    background-color: aqua;
+}
+</style>
