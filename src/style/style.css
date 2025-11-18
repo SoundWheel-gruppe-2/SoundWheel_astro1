@@ -1,7 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: large;
+  font-style: light;
+  color: rgba(60, 78, 92, 1);
+}
 h2 {
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
   font-size: x-large;
   font-style: light;
-  text-decoration: red;
+  color: rgba(223, 232, 237, 1);
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-size: small;
+  font-style: light;
+  color: rgba(60, 78, 92, 1);
 }
