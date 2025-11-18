@@ -15,8 +15,6 @@ const supaRequest = await fetch(url, options);
 const supaData = await supaRequest.json();
 
 console.log("supaData", supaData);
-
-
 ---
 
 <html lang="en">
@@ -34,10 +32,9 @@ console.log("supaData", supaData);
   <header>
     <Header />
     <body>
-        <PlanCard/>
-        <PlanCard/>
-        <PlanCard/>
-    
+      <PlanCard h2text="Yo" text1="Yo" boldText="Yo" prisText="1334" prisText="Yo" />
+      <PlanCard />
+      <PlanCard />
     </body>
   </header>
 
