@@ -1,26 +1,30 @@
-<section class="footer">
-  <div class="logo">
-    <img src="public/img/logo_footer.png" alt="SoundWheel Logo" class="footer-logo" />
-  </div>
-  <div class="grid1_1">
-    <div>
-      <h2>Download SoundWheel nu og prøv gratis i 14 dage.</h2>
-      <img src="public/img/appiconappel.png" alt="Download på App Store" />
-      <img src="public/img/appicongoogle.png" alt="Hent på Google Play" />
+<footer>
+  <section class="footer">
+    <div class="logo">
+      <img
+        src="public/img/logo_footer.png"
+        alt="SoundWheel Logo"
+        class="footer-logo"
+      />
     </div>
-    <div>
-      <h2>Kontakt</h2>
-      <h2>Handels- og abonnomentsbetingelser</h2>
-      <h2>Persondatapolitik</h2>
+    <div class="grid1_1">
+      <div>
+        <h2>Download SoundWheel nu og prøv gratis i 14 dage.</h2>
+        <img src="public/img/appiconappel.png" alt="Download på App Store" />
+        <img src="public/img/appicongoogle.png" alt="Hent på Google Play" />
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <h2>Handels- og abonnomentsbetingelser</h2>
+        <h2>Persondatapolitik</h2>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</footer>
 
 <style>
-  .footer {
+  footer {
     background-color: rgba(57, 70, 81, 1);
-    position: relative; /* Vigtigt: Gør .footer til referencepunkt for absolut positionering */
-    padding-top: 50px; /* Skaf plads til logoet øverst */
   }
   .grid1_1 {
     display: grid;
@@ -30,9 +34,6 @@
     width: 60%;
     height: 60%;
     margin-left: 30%;
-    margin-bottom: 3rem;
-    padding-block: 1rem;
-    padding-left: 2rem;
   }
 
   /* Style til logoet der skal overlappe */
@@ -40,7 +41,9 @@
     position: absolute; /* Tager logoet ud af flowet */
     top: 0; /* Placerer det øverst i .footer containeren */
     left: 11.5%; /* Centrerer det horisontalt */
-    transform: translateX(-50%); /* Trækker det halvdelen af dets egen bredde tilbage mod venstre */
+    transform: translateX(
+      -50%
+    ); /* Trækker det halvdelen af dets egen bredde tilbage mod venstre */
     z-index: 10; /* Sikrer det ligger øverst i lagene */
     width: 320px; /* Juster bredden efter behov */
     height: auto;
