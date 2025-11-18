@@ -15,6 +15,8 @@ const supaData = await supaRequest.json();
 console.log("supaData", supaData);
 
 import Header from "../pages/components/Header.astro";
+import Card1 from "../pages/components/Card1.astro";
+import Card2 from "../pages/components/Card2.astro";
 import Footer from "../pages/components/Footer.astro";
 ---
 
@@ -34,7 +36,18 @@ import Footer from "../pages/components/Footer.astro";
   </head>
   <body>
     <Header />
-
+    <Card1
+      img="img/ss"
+      h1="Bedre pauser for dine medarbejdere"
+      h2="styrk trivlsen i din organisation med Sound Wheel Work"
+      text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
+    />
+    <Card2
+      h1="Bedre pauser for dine medarbejdere"
+      h2="styrk trivlsen i din organisation med Sound Wheel Work"
+      text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
+      img="img/ss"
+    />
     <Footer />
   </body>
 </html>
