@@ -14,6 +14,7 @@ const supaData = await supaRequest.json();
 console.log("supaData", supaData);
 
 import Header from "../pages/components/Header.astro";
+import Footer from "../pages/components/Footer.astro";
 ---
 
 <html lang="en">
@@ -32,6 +33,10 @@ import Header from "../pages/components/Header.astro";
     <Header />
     <body> </body>
   </header>
+
+  <footer>
+    <Footer />
+  </footer>
 
 
 </html>
