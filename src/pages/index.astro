@@ -38,9 +38,21 @@ console.log("supaData", supaData);
   <body>
     <!-- Hmmm -->
     <Header />
-    <img src="img/vikingship.png" alt="vikingeskib" />
-    <h1>Nem Genopladning</h1>
-    <h1>Via progressiv musik</h1>
+    <div>
+      <div>
+        <img class="ideximg" src="img/vikingship.png" alt="vikingeskib" />
+        <div class="indeximgtext">
+          <h1>Nem Genopladning</h1>
+          <h1>Via progressiv musik</h1>
+        </div>
+      </div>
+      <div class="grid2">
+        <h2>music I visualisation I guide on/off</h2>
+        <h2>empowering pauses</h2>
+        <link rel="" href="" />
+        <img class="logocirkel" src="img/" alt="logo" />
+      </div>
+    </div>
     <Card1
       img="img/mandibjerg.png"
       h1="Bedre pauser for dine medarbejdere"
@@ -57,3 +69,25 @@ console.log("supaData", supaData);
     <Footer />
   </body>
 </html>
+
+<style>
+  .indeximg {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .indeximgtext {
+    display: flex;
+    position: relative;
+  }
+
+  .logocirkel {
+    width: 100%;
+    z-index: -1;
+    margin-left: 500px;
+    margin-right: 0;
+    margin-top: -700px;
+  }
+</style>
