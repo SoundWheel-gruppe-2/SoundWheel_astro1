@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import PlanCard from "../components/PlanCard.astro";
 import Card1 from "../components/Card1.astro";
+import Footer from "../components/Footer.astro";
 
 const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
@@ -37,16 +38,60 @@ console.log("supaData", supaData);
       <PlanCard h2text="Plan 2" text1="SoundWheel Work 500" boldText="Op til 500 brugere" prisText="14.999 kr. / år - ekskl. moms" button="Læs mere" />
       <PlanCard h2text="Plan 3" text1="SoundWheel Work 1k" boldText="Op til 1.000 brugere" prisText="19.999 kr. / år - ekskl. moms" button="Læs mere" />
     </div>
-    <Card1 img="img/mandibjerg.png" h1="CITAT" h2="styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." />
+    <div class="kontakt_os">
+      <h2>Over 1.000 medarbejdere? <a href="">Kontakt os</a></h2>
+    </div>
+    <div class="logo_wrapper">
+      <img class="logo_right" src="public/img/bluelogoRight.png" alt="logo" />
+    </div>
+    <div class="card_citat">
+      <Card1 img="public/img/ladyinforestchair.png" h1="Udtale fra Soundwheel" text="hej" />
+    </div>
+    <Footer />
   </body>
 </html>
 
 <style>
+  body {
+    background-color: rgba(57, 70, 81, 1);
+  }
   .planWrapper {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 2rem;
     justify-content: center;
     margin-top: 4rem;
+    margin-bottom: -80px;
+  }
+  .kontakt_os {
+    font-style: normal;
+    color: #3c4f5c;
+    padding-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+  }
+  .kontakt_os a {
+    font-style: oblique;
+    color: #3c4f5c;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .logo_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+
+  .logo_right {
+    width: 150px;
+    height: auto;
+  }
+  .kontakt_os a:hover {
+    text-decoration: underline;
+  }
+  .card_citat {
+    margin-top: 10rem;
+    z-index: 3;
   }
 </style>
