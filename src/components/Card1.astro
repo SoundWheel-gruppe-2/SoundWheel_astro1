@@ -7,11 +7,17 @@ const link = Astro.props.link;
 ---
 
 <article>
-  <img src={img} />
-  <h1>{h1}</h1>
-  <h2>{h2}</h2>
-  <p>{text}</p>
-  <link href={link} />
+  <div class="grid2">
+    <div class="computer">
+      <img src={img} />
+    </div>
+    <div>
+      <h1>{h1}</h1>
+      <h2>{h2}</h2>
+      <p>{text}</p>
+      <link href={link} />
+    </div>
+  </div>
 </article>
 
 <style>
@@ -40,5 +46,27 @@ const link = Astro.props.link;
     line-height: var(--lineheightcard);
     color: var(--textcardcolor);
     padding: 0 20px 20px 20px;
+  }
+
+  /* GRID */
+
+  .computer {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .computer img {
+    width: 100%; /* juster størrelse */
+    z-index: 10;
+    margin-top: -150px;
+  }
+
+  .computer {
+    display: grid;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 </style>
