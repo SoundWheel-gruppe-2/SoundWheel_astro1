@@ -5,8 +5,7 @@ import Footer from "../components/Footer.astro";
 import Card4 from "../components/Card4.astro";
 
 const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
 
 const options = {
   headers: {
@@ -28,10 +27,7 @@ console.log("supaData", supaData);
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
     <title>Work planside</title>
   </head>
   <Header />
@@ -39,27 +35,9 @@ console.log("supaData", supaData);
     <section>
       <img src="public/img/colleagues.png" alt="kollegaer" />
       <div class="planWrapper">
-        <PlanCard
-          h2text="Plan 1"
-          text1="SoundWheel Work 100"
-          boldText="Op til 100 brugere"
-          prisText="9.999 kr. / år - ekskl. moms"
-          button="Læs mere"
-        />
-        <PlanCard
-          h2text="Plan 2"
-          text1="SoundWheel Work 500"
-          boldText="Op til 500 brugere"
-          prisText="14.999 kr. / år - ekskl. moms"
-          button="Læs mere"
-        />
-        <PlanCard
-          h2text="Plan 3"
-          text1="SoundWheel Work 1k"
-          boldText="Op til 1.000 brugere"
-          prisText="19.999 kr. / år - ekskl. moms"
-          button="Læs mere"
-        />
+        <PlanCard h2text="Plan 1" text1="SoundWheel Work 100" boldText="Op til 100 brugere" prisText="9.999 kr. / år - ekskl. moms" button="Læs mere" />
+        <PlanCard h2text="Plan 2" text1="SoundWheel Work 500" boldText="Op til 500 brugere" prisText="14.999 kr. / år - ekskl. moms" button="Læs mere" />
+        <PlanCard h2text="Plan 3" text1="SoundWheel Work 1k" boldText="Op til 1.000 brugere" prisText="19.999 kr. / år - ekskl. moms" button="Læs mere" />
       </div>
       <div class="kontakt_os">
         <h2>Over 1.000 medarbejdere? <a href="">Kontakt os</a></h2>
@@ -70,12 +48,7 @@ console.log("supaData", supaData);
     </section>
 
     <div class="card_citat">
-      <Card4
-        img="img/ladyinforestchair.png"
-        h1="“"
-        h2="SoundWheel Work har gjort en mærkbar forskel i vores teams daglige arbejdsgang. De korte lydrejser hjælper vores medarbejdere med at genoplade mentalt og vende tilbage til arbejdet med fornyet fokus og energi."
-        text="– Maria Jensen, HR-chef hos TechSolutions"
-      />
+      <Card4 img="img/ladyinforestchair.png" h1="Udtagelse fra HR chef" h1="“" h2="SoundWheel Work har gjort en mærkbar forskel i vores teams daglige arbejdsgang. De korte lydrejser hjælper vores medarbejdere med at genoplade mentalt og vende tilbage til arbejdet med fornyet fokus og energi." h1="“" text="– Maria Jensen, HR-chef hos TechSolutions" />
       <Footer />
     </div>
   </body>
@@ -91,10 +64,11 @@ console.log("supaData", supaData);
       justify-content: center;
       margin-top: 4rem;
       margin-bottom: -80px;
+      z-index: 10;
     }
     .kontakt_os {
       font-style: normal;
-      color: #3c4f5c;
+      color: rgba(223, 232, 237, 1);
       padding-bottom: 30px;
       justify-content: center;
       text-align: center;
@@ -102,7 +76,7 @@ console.log("supaData", supaData);
     }
     .kontakt_os a {
       font-style: oblique;
-      color: #3c4f5c;
+      color: rgba(223, 232, 237, 1);
       font-weight: bold;
       text-decoration: none;
     }
@@ -111,17 +85,21 @@ console.log("supaData", supaData);
       justify-content: flex-end;
       padding: 20px;
     }
+    .logo_wrapper img {
+      height: 100%;
+      width: 30%;
+      margin-top: -300px;
+      margin-right: -24px;
+      margin-bottom: -15px;
+    }
 
     .logo_right {
       width: 150px;
       height: auto;
+      z-index: -1;
     }
     .kontakt_os a:hover {
       text-decoration: underline;
-    }
-    .card_citat {
-      margin-top: 10rem;
-      z-index: 3;
     }
   </style>
 </html>

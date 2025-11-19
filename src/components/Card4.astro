@@ -13,7 +13,9 @@ const link = Astro.props.link;
     </div>
     <div>
       <h1>{h1}</h1>
+      <h1>{h1}</h1>
       <h2>{h2}</h2>
+      <h1>{h1}</h1>
       <p>{text}</p>
       <a href={link}></a>
     </div>
@@ -26,25 +28,14 @@ const link = Astro.props.link;
   }
 
   h1 {
-    font-family: var(--fontcardh1);
-    font-weight: var(--fontwightcard);
-    font-size: var(--fontsizecardh1);
-    line-height: var(--lineheightcard);
+    color: rgba(71, 96, 115, 1);
   }
   h2 {
-    font-family: var(--fontcardh1);
-    font-weight: var(--fontwightcard);
-    font-size: var(--fontsizecard);
-    line-height: var(--lineheightcard);
+    color: rgba(71, 96, 115, 1);
     padding: 0 20px 20px 20px;
-    color: var(--secondary-colorcardh2);
   }
   p {
-    font-family: var(--fontcardp);
-    font-weight: var(--fontwightcard);
-    font-size: var(--fontsizecard);
-    line-height: var(--lineheightcard);
-    color: var(--textcardcolor);
+    color: rgba(71, 96, 115, 1);
     padding: 0 20px 20px 20px;
   }
 
@@ -60,6 +51,9 @@ const link = Astro.props.link;
     width: 100%; /* juster størrelse */
     z-index: 10;
     margin-top: -100px;
+    width: 80%;
+    margin-left: 50px;
+    padding-bottom: 80px;
   }
 
   .computer {
