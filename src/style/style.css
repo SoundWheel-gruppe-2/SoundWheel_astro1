@@ -37,7 +37,11 @@ h1 {
   font-size: large;
   font-style: light;
   color: var(--primarycolorh1);
+  font-weight: large;
+  font-style: normal;
+  color: rgba(60, 78, 92, 1);
 }
+
 h2 {
   font-family: "Inter", sans-serif;
   font-size: x-large;
