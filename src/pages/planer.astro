@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import PlanCard from "../components/PlanCard.astro";
+import Card1 from "../components/Card1.astro";
 
 const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
@@ -27,15 +28,25 @@ console.log("supaData", supaData);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
     <title>Work planside</title>
-    
   </head>
-    <Header />
-    <body>
-        <PlanCard/>
-        <PlanCard/>
-        <PlanCard/>
-      <PlanCard h2text="Yo" text1="Yo" boldText="Yo" prisText="1334" prisText="Yo" />
-      <PlanCard />
-      <PlanCard />
-    </body>
+  <Header />
+  <body>
+    <img src="public/img/colleagues.png" alt="kollegaer" />
+    <div class="planWrapper">
+      <PlanCard h2text="Plan 1" text1="SoundWheel Work 100" boldText="Op til 100 brugere" prisText="9.999 kr. / år - ekskl. moms" button="Læs mere" />
+      <PlanCard h2text="Plan 2" text1="SoundWheel Work 500" boldText="Op til 500 brugere" prisText="14.999 kr. / år - ekskl. moms" button="Læs mere" />
+      <PlanCard h2text="Plan 3" text1="SoundWheel Work 1k" boldText="Op til 1.000 brugere" prisText="19.999 kr. / år - ekskl. moms" button="Læs mere" />
+    </div>
+    <Card1 img="img/mandibjerg.png" h1="CITAT" h2="styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." />
+  </body>
 </html>
+
+<style>
+  .planWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+</style>
