@@ -1,8 +1,10 @@
 <footer>
-  <section class="footer">
+  <section>
     <div class="logo">
-      <img src="public/img/logo_footer.png" alt="SoundWheel Logo" class="footer-logo" />
+      <img src="/img/footer_logo1.png" alt="SoundWheel Logo" class="footer-logo" />
     </div>
+  </section>
+  <section class="container">
     <div class="grid1_1">
       <div>
         <h2>Download SoundWheel nu og prøv gratis i 14 dage.</h2>
@@ -20,26 +22,40 @@
 
 <style>
   footer {
+    position: relative; /* reference for absolutte børn */
+    height: 300px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     background-color: rgba(57, 70, 81, 1);
   }
   .grid1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
     background-color: rgba(110, 143, 162, 1);
     width: 60%;
     height: 60%;
     margin-left: 30%;
+    display: inline-block;
+    padding-bottom: 80px;
+    z-index: 10;
+    bottom: 0;
   }
 
   /* Style til logoet der skal overlappe */
   .footer-logo {
-    position: absolute; /* Tager logoet ud af flowet */
-    top: 0; /* Placerer det øverst i .footer containeren */
-    left: 11.5%; /* Centrerer det horisontalt */
-    transform: translateX(-50%); /* Trækker det halvdelen af dets egen bredde tilbage mod venstre */
-    z-index: 10; /* Sikrer det ligger øverst i lagene */
-    width: 320px; /* Juster bredden efter behov */
+    position: absolute;
+    z-index: 5; /* Sikrer det ligger øverst i lagene */
+    width: 50%; /* Juster bredden efter behov */
     height: auto;
+  }
+  .container {
+    position: relative;
+    grid-column: 1/3;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    padding-right: 50px;
+    z-index: 10;
   }
 </style>
