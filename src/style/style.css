@@ -10,10 +10,11 @@ img {
 
 h1 {
   font-family: "Inter", sans-serif;
-  font-size: large;
-  font-style: light;
+  font-weight: large;
+  font-style: normal;
   color: rgba(60, 78, 92, 1);
 }
+
 h2 {
   font-family: "Inter", sans-serif;
   font-size: x-large;
