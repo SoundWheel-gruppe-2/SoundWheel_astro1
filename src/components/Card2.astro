@@ -4,13 +4,41 @@ const h1 = Astro.props.h1;
 const h2 = Astro.props.h2;
 const text = Astro.props.text;
 const link = Astro.props.link;
-
 ---
 
 <article>
-    <h1>{h1}</h1>
-    <h2>{h2}</h2>
-    <p>{text}</p>
-    <link href={link}></link>
-    <img src={img} />
+  <h1>{h1}</h1>
+  <h2>{h2}</h2>
+  <p>{text}</p>
+  <link href={link} />
 </article>
+<img src={img} />
+
+<style>
+  article {
+    background-color: var(--backgroundcolorcard);
+  }
+
+  h1 {
+    font-family: var(--fontcardh1);
+    font-weight: var(--fontwightcard);
+    font-size: var(--fontsizecardh1);
+    line-height: var(--lineheightcard);
+  }
+  h2 {
+    font-family: var(--fontcardh1);
+    font-weight: var(--fontwightcard);
+    font-size: var(--fontsizecard);
+    line-height: var(--lineheightcard);
+    padding: 0 20px 20px 20px;
+    color: var(--secondary-colorcardh2);
+  }
+  p {
+    font-family: var(--fontcardp);
+    font-weight: var(--fontwightcard);
+    font-size: var(--fontsizecard);
+    line-height: var(--lineheightcard);
+    color: var(--textcardcolor);
+    padding: 0 20px 20px 20px;
+  }
+</style>

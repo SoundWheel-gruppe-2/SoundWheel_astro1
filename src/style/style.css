@@ -4,12 +4,39 @@
   padding: 0;
 }
 
+html {
+  --primary-colorbg: rgba(60, 78, 92, 1);
+  --primarycolorh1: rgba(60, 78, 92, 1);
+  --primarycolorp: rgba(60, 78, 92, 1);
+  --primarycolorh2: rgba(223, 232, 237, 1);
+
+  /* Color and font Variables cards */
+  --fontcardh1: "heebo", sans-serif;
+  --fontcardp: "inter", sans-serif;
+  --fontwightcard: 400;
+  --fontsizecard: 20px;
+  --fontsizecardh1: 24px;
+  --lineheightcard: 30px;
+
+  --primary-colorcardh1: rgba(60, 78, 92, 1);
+  --secondary-colorcardh2: rgba(71, 96, 115, 1);
+  --textcardcolor: rgba(57, 70, 81, 1);
+  --backgroundcolorcard: rgba(223, 232, 237, 1);
+}
+
+body {
+  background-color: var(--primary-colorbg);
+}
+
 img {
   max-width: 100%;
 }
 
 h1 {
   font-family: "Inter", sans-serif;
+  font-size: large;
+  font-style: light;
+  color: var(--primarycolorh1);
   font-weight: large;
   font-style: normal;
   color: rgba(60, 78, 92, 1);
@@ -19,12 +46,12 @@ h2 {
   font-family: "Inter", sans-serif;
   font-size: x-large;
   font-style: light;
-  color: rgba(223, 232, 237, 1);
+  color: var(--primarycolorh2);
 }
 
 p {
   font-family: "Inter", sans-serif;
   font-size: small;
   font-style: light;
-  color: rgba(60, 78, 92, 1);
+  color: var(--primarycolorp);
 }
