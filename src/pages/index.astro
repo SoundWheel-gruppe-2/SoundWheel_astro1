@@ -6,7 +6,8 @@ import Footer from "../components/Footer.astro";
 import "../style/style.css";
 
 const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
-const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
 
 const options = {
   headers: {
@@ -28,25 +29,33 @@ console.log("supaData", supaData);
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Work forside</title>
   </head>
   <body>
     <!-- Hmmm -->
     <Header />
     <section>
-      <img class="indeximg" src="img/vikingship.png" alt="vikingeskib" />
-      <div id="indeximgtext">
-        <h1>Nem <br /> Genopladning</h1>
-        <h2>Via progressiv musik</h2>
+      <div class="container1">
+        <img id="lydrejse" src="/img/proevenlydrejse.svg" alt="" />
+        <div id="indeximgtext">
+          <h1>Nem <br /> Genopladning</h1>
+          <h2>Via progressiv musik</h2>
+        </div>
       </div>
     </section>
 
-    <section class="logoindex">
-      <div>
+    <section>
+      <div class="logoindex">
         <div class="text">
           <h2>music I visualisation I guide on/off</h2>
           <h2>empowering pauses</h2>
@@ -65,12 +74,33 @@ console.log("supaData", supaData);
       text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
     />
     <img src="img/soundwheelwavelogo.svg" alt="logo" />
-    <Card2 h1="Bedre pauser for dine medarbejdere" h2="styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." img="img/mandibjerg.png" />
+    <Card2
+      h1="Bedre pauser for dine medarbejdere"
+      h2="styrk trivlsen i din organisation med Sound Wheel Work"
+      text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
+      img="img/mandibjerg.png"
+    />
     <Footer />
   </body>
 </html>
 
 <style>
+  .container1 {
+    position: relative;
+    background-image: url("img/vikingship.png");
+    background-size: cover;
+    width: 100vw;
+    height: 600px;
+  }
+
+  #lydrejse {
+    width: 10%;
+    display: block;
+    position: relative;
+    z-index: 100;
+    left: 1000px;
+  }
+
   .indeximg {
     width: 100%;
     display: block;
@@ -83,7 +113,6 @@ console.log("supaData", supaData);
     position: relative;
     z-index: 10;
     font-size: 3rem;
-    padding-top: 150px;
     padding-left: 50px;
     color: rgba(243, 247, 248, 1);
     font-weight: 400;
@@ -96,7 +125,7 @@ console.log("supaData", supaData);
     color: rgba(197, 212, 220, 1);
     font-weight: 400;
     padding-left: 50px;
-    margin-bottom: 500px;
+    margin-bottom: 50px;
   }
 
   .logowrapper2 {
@@ -113,5 +142,13 @@ console.log("supaData", supaData);
 
   .text {
     position: relative;
+  }
+
+  .logoindex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 50px;
+    height: 300px;
   }
 </style>
