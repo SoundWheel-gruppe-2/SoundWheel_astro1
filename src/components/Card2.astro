@@ -3,7 +3,7 @@ const img = Astro.props.img;
 const h1 = Astro.props.h1;
 const h2 = Astro.props.h2;
 const text = Astro.props.text;
-const link = Astro.props.link;
+const knap = Astro.props.knap;
 ---
 
 <article>
@@ -12,8 +12,10 @@ const link = Astro.props.link;
       <h1>{h1}</h1>
       <h2>{h2}</h2>
       <p>{text}</p>
+      <div class="knap">
+        <a href="src/pages/fakta.astro">{knap}</a>
+      </div>
     </div>
-    <link href={link} />
     <div class="computer">
       <img src={img} />
     </div>
@@ -77,5 +79,24 @@ const link = Astro.props.link;
   .grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .knap a {
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(60, 79, 92, 1);
+    display: inline-block;
+    padding: 17px 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-family: var(--fontcardp);
+    margin-top: 100px;
+    position: relative;
+    left: 10px;
+  }
+  .knap a:hover {
+    color: #3c4f5c;
+    background-color: #c5d4dc;
   }
 </style>
