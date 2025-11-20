@@ -24,13 +24,16 @@ import "../style/style.css";
   </head>
   <body>
     <Header />
-    <section class="wrapper">
+    <section class="wrapper1">
       <h1>Hvad får du hos SoundWheel?</h1>
-      <div class="planWrapper1">
-        <Card7 img="img/iconcomputer.png" text="Brugervenligt adminpanel. Tilføj alle medarbejdere ved tryk på en knap." />
-        <Card7 img="img/icon2.png" text="Statestikker, der giver indsigt i, hvordan SoundWheel skaber værdi i organisationen." />
-        <Card7 img="img/iphoneicon.png" text="Adgang til vores komplette bibliotek af lydrejser, som kan bruges individuelt eller i grupper." />
-      </div>
+
+      <section class="wrapper">
+        <div class="planWrapper1">
+          <Card7 img="img/iconcomputer.png" text="Brugervenligt adminpanel. Tilføj alle medarbejdere ved tryk på en knap." />
+          <Card7 img="img/icon2.png" text="Statestikker, der giver indsigt i, hvordan SoundWheel skaber værdi i organisationen." />
+          <Card7 img="img/iphoneicon.png" text="Adgang til vores komplette bibliotek af lydrejser, som kan bruges individuelt eller i grupper." />
+        </div>
+      </section>
     </section>
     <div class="karussel-container">
       <div class="karussel-bg"></div>
@@ -46,19 +49,31 @@ import "../style/style.css";
 </html>
 
 <style>
-  .wrapper {
+  .wrapper1 {
     background-color: rgba(110, 143, 162, 1);
   }
-  .planWrapper1 {
+  .wrapper {
+    background-color: rgba(110, 143, 162, 1);
+    height: 30rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative; /* viktig */
+  }
+
+  .planWrapper1 {
+    display: flex;
     gap: 2rem;
     align-items: stretch;
+
+    position: relative; /* ligger oppå men er fortsatt i flex */
+    z-index: 10; /* sørger for at den kommer over wrapper-innhold */
+    margin-top: 2rem;
   }
 
   h1 {
     font-family: "Roboto", sans-serif;
-    font-weight: lighter;
+    font-weight: light;
     color: rgba(223, 232, 237, 1);
     text-align: center;
     padding-top: 2rem;
