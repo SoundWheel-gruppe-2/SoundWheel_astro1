@@ -59,7 +59,9 @@ console.log("supaData", supaData);
         <div class="text">
           <h1>music I visualisation I guide on/off</h1>
           <h2>empowering pauses</h2>
-          <link rel="" href="" />
+          <div class="knap">
+            <a href="/src/pages/fakta.astro">Læs mere</a>
+          </div>
         </div>
         <div class="logowrapper2">
           <img src="img/forside_logo.png" alt="logo" />
@@ -159,7 +161,7 @@ console.log("supaData", supaData);
     text-align: center;
     color: rgba(110, 143, 162, 1);
     padding-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
   }
 
   .logoindex {
@@ -168,5 +170,24 @@ console.log("supaData", supaData);
     align-items: center;
     padding-left: 70px;
     height: 540px;
+  }
+
+  .knap a {
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(110, 143, 162, 1);
+    display: inline-block;
+    padding: 17px 50px;
+    border-radius: 40px;
+    text-align: center;
+    font-family: var(--fontcardp);
+    position: relative;
+    left: 140px;
+    margin-bottom: 100px;
+  }
+  .knap a:hover {
+    color: #3c4f5c;
+    background-color: #c5d4dc;
   }
 </style>
