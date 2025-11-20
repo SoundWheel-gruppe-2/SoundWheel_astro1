@@ -11,7 +11,7 @@ const link = Astro.props.link;
     <div class="computer">
       <img src={img} />
     </div>
-    <div>
+    <div class="textcontent">
       <h1>{h1}</h1>
       <h2>{h2}</h2>
       <p>{text}</p>
@@ -23,6 +23,12 @@ const link = Astro.props.link;
 <style>
   article {
     background-color: var(--backgroundcolorcard);
+  }
+
+  .textcontent {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   h1 {
@@ -60,6 +66,9 @@ const link = Astro.props.link;
     width: 100%; /* juster størrelse */
     z-index: 10;
     margin-top: -100px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
   }
 
   .computer {

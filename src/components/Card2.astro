@@ -8,7 +8,7 @@ const link = Astro.props.link;
 
 <article>
   <div class="grid2">
-    <div>
+    <div class="textcontent2">
       <h1>{h1}</h1>
       <h2>{h2}</h2>
       <p>{text}</p>
@@ -25,6 +25,12 @@ const link = Astro.props.link;
     background-color: var(--backgroundcolorcard);
   }
 
+  .textcontent2 {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   h1 {
     font-family: var(--fontcardh1);
     font-weight: var(--fontwightcard);
@@ -36,7 +42,7 @@ const link = Astro.props.link;
     font-weight: var(--fontwightcard);
     font-size: var(--fontsizecard);
     line-height: var(--lineheightcard);
-    padding: 0 20px 20px 20px;
+
     color: var(--secondary-colorcardh2);
   }
   p {
@@ -45,7 +51,6 @@ const link = Astro.props.link;
     font-size: var(--fontsizecard);
     line-height: var(--lineheightcard);
     color: var(--textcardcolor);
-    padding: 0 20px 20px 20px;
   }
 
   /* GRID */
@@ -60,8 +65,10 @@ const link = Astro.props.link;
     width: 100%; /* juster størrelse */
     z-index: 10;
     margin-bottom: -150px;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-right: 40px;
   }
-
   .computer {
     display: grid;
   }
