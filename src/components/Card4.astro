@@ -2,6 +2,7 @@
 const img = Astro.props.img;
 const h1 = Astro.props.h1;
 const h2 = Astro.props.h2;
+const h3 = Astro.props.h3;
 const text = Astro.props.text;
 const link = Astro.props.link;
 ---
@@ -13,9 +14,9 @@ const link = Astro.props.link;
     </div>
     <div>
       <h1>{h1}</h1>
-      <h1>{h1}</h1>
       <h2>{h2}</h2>
-      <h1>{h1}</h1>
+      <h3>{h3}</h3>
+      <h2>{h2}</h2>
       <p>{text}</p>
       <a href={link}></a>
     </div>
@@ -29,10 +30,16 @@ const link = Astro.props.link;
 
   h1 {
     color: rgba(71, 96, 115, 1);
+    padding: 3rem;
   }
   h2 {
     color: rgba(71, 96, 115, 1);
     padding: 0 20px 20px 20px;
+  }
+  h3 {
+    color: rgba(71, 96, 115, 1);
+    padding: 0 100px 20px 20px;
+    line-height: 3rem;
   }
   p {
     color: rgba(71, 96, 115, 1);
