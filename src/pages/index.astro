@@ -6,8 +6,7 @@ import Footer from "../components/Footer.astro";
 import "../style/style.css";
 
 const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
 
 const options = {
   headers: {
@@ -29,16 +28,10 @@ console.log("supaData", supaData);
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <title>Work forside</title>
   </head>
   <body>
@@ -69,21 +62,11 @@ console.log("supaData", supaData);
       </div>
     </section>
 
-    <Card1
-      img="img/mandibjerg.png"
-      h1="Bedre pauser for dine medarbejdere"
-      h2="Styrk trivlsen i din organisation med Sound Wheel Work"
-      text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
-      knap="Læs mere"
-    />
+    <Card1 img="img/mandibjerg.png" h1="Bedre pauser for dine medarbejdere" h2="Styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." knap="Læs mere" />
     <img src="img/soundwheelwavelogo.svg" alt="logo" />
-    <Card2
-      h1="Lav en workshop på din arbejdsplads "
-      h2="Styrk trivlsen i din organisation med Sound Wheel Work"
-      text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
-      img="img/kristian.png"
-      knap="Kontakt os"
-    />
+    <div class="nederstebillede">
+      <Card2 h1="Lav en workshop på din arbejdsplads " h2="Styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." img="img/kristian.png" knap="Kontakt os" />
+    </div>
     <Footer />
   </body>
 </html>
