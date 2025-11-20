@@ -4,6 +4,7 @@ const text1 = Astro.props.text1;
 const boldText = Astro.props.boldText;
 const prisText = Astro.props.prisText;
 const button = Astro.props.button;
+const { variant, data } = Astro.props;
 ---
 
 <article class="planCard">
@@ -11,7 +12,7 @@ const button = Astro.props.button;
   <p>{text1}</p>
   <p class="bold_p">{boldText}</p>
   <p>{prisText}</p>
-  <a href="">{button}</a>
+  <a href="`/${data.slug}`">{button}</a>
 </article>
 
 <style>

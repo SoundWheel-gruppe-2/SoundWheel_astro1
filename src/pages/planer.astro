@@ -4,6 +4,7 @@ import PlanCard from "../components/PlanCard.astro";
 import Footer from "../components/Footer.astro";
 import Card4 from "../components/Card4.astro";
 import "../style/style.css";
+import Card5 from "../components/Card5.astro";
 
 const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
 const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
@@ -52,6 +53,11 @@ console.log("supaData", supaData);
       <Card4 img="img/ladyinforestchair.png" h1="Udtagelse fra HR chef" h2="“" h3="SoundWheel Work har gjort en mærkbar forskel i vores teams daglige arbejdsgang. De korte lydrejser hjælper vores medarbejdere med at genoplade mentalt og vende tilbage til arbejdet med fornyet fokus og energi." h2="“" text="– Maria Jensen, HR-chef hos TechSolutions" />
       <Footer />
     </div>
+    {
+      supaData.map((plan) => {
+        return <Card5 data={plan} />;
+      })
+    }
   </body>
 
   <style>
