@@ -33,24 +33,18 @@ img {
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
-  font-size: large;
-  font-style: light;
-  color: var(--primarycolorh1);
-  font-weight: large;
-  font-style: normal;
-  color: rgba(60, 78, 92, 1);
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: x-large;
   font-style: light;
   color: var(--primarycolorh2);
 }
 
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: small;
   font-style: light;
   color: var(--primarycolorp);
