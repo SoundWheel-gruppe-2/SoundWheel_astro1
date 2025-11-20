@@ -15,8 +15,11 @@ html {
   --fontcardp: "inter", sans-serif;
   --fontwightcard: 400;
   --fontsizecard: 20px;
-  --fontsizecardh1: 24px;
-  --lineheightcard: 30px;
+  --fontsizecardh1: 60px;
+  --fontsizecardh2: 40px;
+  --lineheightcard: 70px;
+  --lineheightcardh2: 50px;
+  --lineheightcardp: 30px;
 
   --primary-colorcardh1: rgba(60, 78, 92, 1);
   --secondary-colorcardh2: rgba(71, 96, 115, 1);
