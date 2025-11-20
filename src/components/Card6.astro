@@ -1,7 +1,7 @@
 <article>
   <div class="grid1">
     <div class="tekst">
-      <h1>Mental fitness for medarbejdere</h1>
+      <h2>Mental fitness for medarbejdere</h2>
       <p>Skab bedre trivlse for dit team med SoundWheel. Vores korte sessioner er let tilgængelige og skaber nærende små pauser i løbet af arbejdsdagen. De reducerer stress, skærper fokus og giver ny energi.</p>
     </div>
     <img src="img/mobil.png" alt="billeder fra virksomhed" />
@@ -9,7 +9,7 @@
   <div class="grid2">
     <img src="img/company.png" alt="billede af mobiler" />
     <div class="tekst1">
-      <h1>Stress koster 55 mia. kr. om året</h1>
+      <h2>Stress koster 55 mia. kr. om året</h2>
       <p>Arbejdsrelateret stress sænker det effektive arbejdsudbud med 55.600 fuldtidsbeskæftigede, hvilket fører til et årligt velstandstab (BNP) på næsten 55 mia. kr.</p>
       <a href="https://www.ae.dk/analyse/2024-03-stress-koster-55-mia-kr-om-aaret">https://www.ae.dk/analyse/2024-03-stress-koster-55-mia-kr-om-aaret</a>
     </div>
@@ -26,11 +26,11 @@
     grid-template-columns: 1fr 1fr;
     margin-left: 6rem;
     margin-right: 6rem;
-    align-items: center; /* valgfrit */
+    align-items: start;
   }
 
   .grid1 img {
-    width: 100%;
+    width: 120%;
     margin-top: -150px;
     z-index: 10;
   }
@@ -40,7 +40,7 @@
     grid-template-columns: 1fr 1fr;
     margin-left: 6rem;
     margin-right: 6rem;
-    align-items: center; /* valgfrit */
+    align-items: start;
   }
 
   .grid2 img {
@@ -49,11 +49,25 @@
     z-index: 10;
   }
 
+  .tekst1 {
+    padding-left: 2rem;
+  }
   h1 {
-    font-size: 400%;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: #3c4f5c;
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-size: 5rem;
+    color: #3c4f5c;
+    padding-top: 2rem;
   }
 
   p {
-    font-size: 150%;
+    font-size: 2rem;
+    line-height: 2;
   }
 </style>

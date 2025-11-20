@@ -1,14 +1,115 @@
 ---
 import Header from "../components/Header.astro";
-import Card3 from "../components/Card3.astro";
-import Card5 from "../components/Card5.astro";
 import Card6 from "../components/Card6.astro";
+import Card7 from "../components/Card7.astro";
+import Card8 from "../components/Card8.astro";
+import Card3 from "../components/Card3.astro";
 import Footer from "../components/Footer.astro";
 import "../style/style.css";
 ---
 
-<Header />
-<Card6 />
-<Card5 />
-<Card3 />
-<Footer />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <title>Work forside</title>
+  </head>
+  <body>
+    <Header />
+    <section class="wrapper">
+      <h1>Hvad får du hos SoundWheel?</h1>
+      <div class="planWrapper1">
+        <Card7 img="img/iconcomputer.png" text="Brugervenligt adminpanel. Tilføj alle medarbejdere ved tryk på en knap." />
+        <Card7 img="img/icon2.png" text="Statestikker, der giver indsigt i, hvordan SoundWheel skaber værdi i organisationen." />
+        <Card7 img="img/iphoneicon.png" text="Adgang til vores komplette bibliotek af lydrejser, som kan bruges individuelt eller i grupper." />
+      </div>
+    </section>
+    <div class="karussel-container">
+      <div class="karussel-bg"></div>
+      <div class="karussel-wrapper">
+        <div class="karussel-text">WORK · BREAK · LIFE · BALANCE · WORK · BREAK · LIFE · BALANCE · WORK · BREAK · LIFE · BALANCE · WORK · BREAK · LIFE · BALANCE · WORK · BREAK · LIFE · BALANCE</div>
+      </div>
+    </div>
+    <Card6 />
+    <Card8 />
+    <Card3 />
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .wrapper {
+    background-color: rgba(110, 143, 162, 1);
+  }
+  .planWrapper1 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    color: rgba(223, 232, 237, 1);
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .karussel-container {
+    position: relative; /* for absolut positionering af bg */
+    overflow: hidden;
+    width: 100%;
+    height: 700px; /* juster efter behov */
+    background-color: rgba(57, 70, 81, 1);
+  }
+
+  .karussel-bg {
+    position: absolute;
+    top: 0;
+    left: 50%; /* flyt startpunkt til midten af containeren */
+    transform: translateX(-50%); /* træk det tilbage så det centrerer */
+    width: 35%; /* beholder størrelsen */
+    height: 100%;
+    background-image: url("img/fulllogo.png");
+    background-repeat: no-repeat;
+    background-size: contain; /* fylder div’en */
+    background-position: center;
+    z-index: 1;
+  }
+
+  .karussel-wrapper {
+    position: relative; /* så teksten ligger over bg */
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center; /* centrer vertikalt */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .karussel-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: karussel 40s linear infinite;
+    font-size: 6rem;
+    color: rgba(157, 182, 194, 1);
+  }
+
+  @keyframes karussel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
