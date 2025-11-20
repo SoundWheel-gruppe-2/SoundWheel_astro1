@@ -15,40 +15,53 @@ const button = Astro.props.button;
 </article>
 
 <style>
-  article {
-    display: grid;
-    margin: 0 auto;
-  }
+  @media screen and (min-width: 800px) {
+    article {
+      display: grid;
+      margin: 0 auto;
+    }
 
-  .planCard {
-    color: #3c4f5c;
-    padding: 20px;
-    background-color: #e0e8ed;
-    margin-bottom: 5rem;
-    margin-top: -12rem;
-    text-align: justify;
-    height: 15rem;
-    width: 15rem;
-    padding: 20px;
-    padding-bottom: 50px;
-  }
-  .bold_p {
-    font-weight: bold;
-  }
-  .planCard a {
-    font-size: larger;
-    color: white;
-    text-decoration: none;
-    background-color: #6e8fa2;
-    display: inline-block;
-    padding-inline: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  .planCard a:hover {
-    color: #3c4f5c;
-    background-color: #c5d4dc;
+    .planCard h2 {
+      color: #3c4f5c;
+    }
+
+    .planCard {
+      color: #3c4f5c;
+      padding: 10px;
+      background-color: #e0e8ed;
+      margin-bottom: 5rem;
+      margin-top: -12rem;
+      text-align: justify;
+      height: 15rem;
+      width: 15rem;
+      padding: 20px;
+      padding-bottom: 50px;
+    }
+    .planCard p {
+      padding: 10px;
+      padding-bottom: 15px;
+    }
+    .bold_p {
+      font-weight: bold;
+      padding: 10px;
+    }
+    .planCard a {
+      display: flex;
+      justify-content: flex-end;
+      font-size: larger;
+      color: white;
+      text-decoration: none;
+      background-color: #6e8fa2;
+      display: inline-block;
+      padding-inline: 10px;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .planCard a:hover {
+      color: #3c4f5c;
+      background-color: #c5d4dc;
+    }
   }
 </style>

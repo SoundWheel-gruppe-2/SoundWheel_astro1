@@ -49,7 +49,7 @@ console.log("supaData", supaData);
     </section>
 
     <div class="card_citat">
-      <Card4 img="img/ladyinforestchair.png" h1="Udtagelse fra HR chef" h1="“" h2="SoundWheel Work har gjort en mærkbar forskel i vores teams daglige arbejdsgang. De korte lydrejser hjælper vores medarbejdere med at genoplade mentalt og vende tilbage til arbejdet med fornyet fokus og energi." h1="“" text="– Maria Jensen, HR-chef hos TechSolutions" />
+      <Card4 img="img/ladyinforestchair.png" h1="Udtagelse fra HR chef" h2="“" h3="SoundWheel Work har gjort en mærkbar forskel i vores teams daglige arbejdsgang. De korte lydrejser hjælper vores medarbejdere med at genoplade mentalt og vende tilbage til arbejdet med fornyet fokus og energi." h2="“" text="– Maria Jensen, HR-chef hos TechSolutions" />
       <Footer />
     </div>
   </body>
@@ -58,7 +58,17 @@ console.log("supaData", supaData);
     body {
       background-color: rgba(57, 70, 81, 1);
     }
+
+    h2 {
+      color: rgba(57, 70, 81, 1);
+    }
     .planWrapper {
+      grid-template-columns: repeat(3, 1fr); /* 3 kolonner på desktop */
+      gap: 2rem;
+      align-items: start;
+    }
+    .planWrapper {
+      color: rgba(57, 70, 81, 1);
       display: grid;
       grid-template-columns: repeat(3, auto);
       gap: 2rem;
@@ -67,13 +77,14 @@ console.log("supaData", supaData);
       margin-bottom: -80px;
       z-index: 10;
     }
-    .kontakt_os {
+    .kontakt_os h2 {
       font-style: normal;
       color: rgba(223, 232, 237, 1);
       padding-bottom: 30px;
       justify-content: center;
       text-align: center;
       z-index: 3;
+      margin-top: 10px;
     }
     .kontakt_os a {
       font-style: oblique;
@@ -84,13 +95,13 @@ console.log("supaData", supaData);
     .logo_wrapper {
       display: flex;
       justify-content: flex-end;
-      padding: 20px;
+      padding: 10px;
     }
     .logo_wrapper img {
       height: 100%;
       width: 30%;
       margin-top: -300px;
-      margin-right: -24px;
+
       margin-bottom: -15px;
     }
 
