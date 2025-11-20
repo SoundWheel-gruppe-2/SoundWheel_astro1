@@ -37,22 +37,33 @@ console.log("supaData", supaData);
   <body>
     <!-- Hmmm -->
     <Header />
-    <div>
+    <section>
+      <img class="indeximg" src="img/vikingship.png" alt="vikingeskib" />
+      <div id="indeximgtext">
+        <h1>Nem <br /> Genopladning</h1>
+        <h2>Via progressiv musik</h2>
+      </div>
+    </section>
+
+    <section class="logoindex">
       <div>
-        <img class="ideximg" src="img/vikingship.png" alt="vikingeskib" />
-        <div class="indeximgtext">
-          <h1>Nem Genopladning</h1>
-          <h1>Via progressiv musik</h1>
+        <div class="text">
+          <h2>music I visualisation I guide on/off</h2>
+          <h2>empowering pauses</h2>
+          <link rel="" href="" />
+        </div>
+        <div class="logowrapper2">
+          <img src="img/forside_logo.png" alt="logo" />
         </div>
       </div>
-      <div class="grid2">
-        <h2>music I visualisation I guide on/off</h2>
-        <h2>empowering pauses</h2>
-        <link rel="" href="" />
-        <img class="logocirkel" src="img/forside_logo.png" alt="logo" />
-      </div>
-    </div>
-    <Card1 img="img/mandibjerg.png" h1="Bedre pauser for dine medarbejdere" h2="styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." />
+    </section>
+
+    <Card1
+      img="img/mandibjerg.png"
+      h1="Bedre pauser for dine medarbejdere"
+      h2="styrk trivlsen i din organisation med Sound Wheel Work"
+      text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud."
+    />
     <img src="img/soundwheelwavelogo.svg" alt="logo" />
     <Card2 h1="Bedre pauser for dine medarbejdere" h2="styrk trivlsen i din organisation med Sound Wheel Work" text="I en travl hverdag er små mentale pauser afgørende for medarbejdernes trivsel og produktivitet. Sound Wheels unikke lydrejser reducerer stress, skærper fokus og giver nyt overskud." img="img/mandibjerg.png" />
     <Footer />
@@ -61,22 +72,46 @@ console.log("supaData", supaData);
 
 <style>
   .indeximg {
-    width: 200px;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
   }
 
-  .indeximgtext {
-    display: flex;
+  #indeximgtext h1 {
     position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    padding-top: 150px;
+    padding-left: 50px;
+    color: rgba(243, 247, 248, 1);
+    font-weight: 400;
   }
 
-  .logocirkel {
-    width: 100%;
+  #indeximgtext h2 {
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    color: rgba(197, 212, 220, 1);
+    font-weight: 400;
+    padding-left: 50px;
+    margin-bottom: 500px;
+  }
+
+  .logowrapper2 {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .logowrapper2 img {
+    height: 100%;
+    width: auto;
     z-index: -1;
-    margin-left: 500px;
-    margin-right: 0;
-    margin-top: -700px;
+    margin-top: 150px;
+  }
+
+  .text {
+    position: relative;
   }
 </style>
