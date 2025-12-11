@@ -1,10 +1,10 @@
 ---
 import Header from "../components/Header.astro";
 
-
 export async function getStaticPaths() {
   const url = "https://qlehotdtjubzaumjaypw.supabase.co/rest/v1/Produkt";
-  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFsZWhvdGR0anViemF1bWpheXB3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTkwMzUsImV4cCI6MjA3ODU5NTAzNX0.n-6jAPy7oVztz5tFcyivZeVTbDQekQJn1ZfIXEqRZIE";
 
   const options = {
     headers: {
@@ -24,6 +24,7 @@ export async function getStaticPaths() {
 
 const { plan } = Astro.props;
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -32,81 +33,85 @@ const { plan } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Work forside</title>
   </head>
   <body>
     <section class="header">
       <Header />
     </section>
-<section class="body1">
-    <article>
-    <div>
-  <h1>{plan.titel}</h1>
-  <p>{plan.overskrift}</p>
-  <p>{plan.pris} / år - ekskl. moms</p>
-</div>
-<div class="grid_1">
-  <img src="img/ladyinforestchair.png" alt="">
-  <div class="grid_2">
-    <h2>{plan.underoverskrift}</h2>
-      <p>{plan.feature1}</p>
-      <p>{plan.feature2}</p>
-      <p>{plan.feature3}</p>
-      <p>{plan.feature4}</p>
-      <p>{plan.feature5}</p>
-      <p>{plan.feature6}</p>
-      <p>{plan.feature7}</p>
-      <p>{plan.feature8}</p>
-      <h3>{plan.underoverskrift2}</h3>
-      <p>{plan.feature9}</p>
-      <p>{plan.feature10}</p>
-</div>
-    </div>
-
-</article>
-</section>
+    <section class="body1">
+      <article>
+        <div>
+          <h1>{plan.titel}</h1>
+          <p>{plan.overskrift}</p>
+          <p>{plan.pris} / år - ekskl. moms</p>
+        </div>
+        <div class="grid_1">
+          <img src="/img/ladyinforestchair.png" alt="" />
+          <div class="grid_2">
+            <h2>{plan.underoverskrift}</h2>
+            <p>{plan.feature1}</p>
+            <p>{plan.feature2}</p>
+            <p>{plan.feature3}</p>
+            <p>{plan.feature4}</p>
+            <p>{plan.feature5}</p>
+            <p>{plan.feature6}</p>
+            <p>{plan.feature7}</p>
+            <p>{plan.feature8}</p>
+            <h3>{plan.underoverskrift2}</h3>
+            <p>{plan.feature9}</p>
+            <p>{plan.feature10}</p>
+          </div>
+        </div>
+      </article>
+    </section>
   </body>
 
-
-<style>
-  .header{
-    background-color: rgba(57, 70, 81, 1);
-
-  }
-  body {
+  <style>
+    .header {
+      background-color: rgba(57, 70, 81, 1);
+    }
+    body {
       background-color: rgba(223, 232, 237, 1);
     }
 
-  .body1{
-    margin-left: 4rem;
-  }
+    .body1 {
+      margin-left: 4rem;
+    }
 
     h1 {
-    color: rgba(71, 96, 115, 1);
-  }
-  h2 {
-    color: rgba(71, 96, 115, 1);
-  }
+      color: rgba(71, 96, 115, 1);
+    }
+    h2 {
+      color: rgba(71, 96, 115, 1);
+    }
 
-  h3{
-    color: rgba(91, 60, 127, 1);
-  }
+    h3 {
+      color: rgba(91, 60, 127, 1);
+    }
 
-  .grid_1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-  .grid_2{
-    margin-left: -6rem;
-  }
+    .grid_2 {
+      margin-left: -6rem;
+    }
 
-  img{
-    width: 80%;
-    height: auto;
-  }
-</style>
+    img {
+      width: 80%;
+      height: auto;
+    }
+  </style>
+</html>
