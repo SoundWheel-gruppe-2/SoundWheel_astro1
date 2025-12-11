@@ -32,8 +32,41 @@ console.log("supaData", supaData);
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
     <title>Work planside</title>
   </head>
+    <body>
+
   <Header />
-  <body>
+  <img src="img/colleagues.png" alt="">  
+   <div class="kontakt_os">
+        <h2>Over 1.000 medarbejdere? <a href="">Kontakt os</a></h2>
+      </div>
+
+  <div class="planWrapper">
+  {supaData.map((plan) => {
+    return (
+      <PlanCard
+        h2text={plan.titel}
+        text1={plan.overskrift}
+        boldText={`Op til ${plan["max-brugere"]} brugere`}
+        prisText={`${plan.pris} kr. / år - ekskl. moms`}
+        button="Læs mere"
+        plan={plan}
+      />
+    );
+  })}
+</div>
+
+    <div class="logo_wrapper">
+        <img class="logo_right" src="public/img/bluelogoRight.png" alt="logo" />
+      </div>
+    </section>
+
+    <div class="card_citat">
+      <Card4 img="img/ladyinforestchair.png" h1="Udtagelse fra HR chef" h2="“" h3="SoundWheel Work har gjort en mærkbar forskel i vores teams daglige arbejdsgang. De korte lydrejser hjælper vores medarbejdere med at genoplade mentalt og vende tilbage til arbejdet med fornyet fokus og energi." h2="“" text="– Maria Jensen, HR-chef hos TechSolutions" />
+      <Footer />
+    </div>
+
+  </body>
+  <!-- <body>
     <section>
       <img src="public/img/colleagues.png" alt="kollegaer" />
       <div class="planWrapper">
@@ -58,7 +91,7 @@ console.log("supaData", supaData);
         return <Card5 data={plan} />;
       })
     }
-  </body>
+  </body> -->
 
   <style>
     body {
